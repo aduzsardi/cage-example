@@ -1,0 +1,8 @@
+version: "2"
+services:
+  dummy_service:
+    build:
+      context: ../src
+    image: test/image
+    ports:
+    - "8000:8000"

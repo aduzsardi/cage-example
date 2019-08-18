@@ -1,0 +1,12 @@
+version: "2"
+services:
+  dummy_service:
+    build:
+      context: ../src_service1
+    image: test/image
+    ports:
+    - "8000:8000"
+  db:
+    image: "postgres"
+    ports:
+    - "3000:3000"

@@ -1,0 +1,9 @@
+version: "2"
+services:
+  shellcheck:
+    image: "gruntworks/shellcheck"
+    build:
+      context: https://github.com/gruntwork-io/bash-commons.git
+      dockerfile: Dockerfile.shellcheck
+    ports:
+    - "3001:3001"
