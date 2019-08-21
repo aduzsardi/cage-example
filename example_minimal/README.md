@@ -15,6 +15,23 @@ The minimal things we need for that is:
 - Two services [Pod, Service,...?](http://cage.faraday.io/basics)
 - One environment (development)
 
+Here's the structure:
+
+```
+.
+├── Makefile          # with make dep => get cage
+├── README.md
+├── cage              # in .gitignore
+├── pods
+│   ├── common.env    # empty file
+│   ├── db.yml        # docker-compose.yml for a Postgres
+│   ├── service.yml   # docker-compose.yml for our service
+│   └── targets
+│       └── development # one deployment target for cage.
+└── src
+    └── Dockerfile    # source code: a plain httpd-alpine image
+```
+
 ## Tasks For You
 
 0.  build the test/image.
